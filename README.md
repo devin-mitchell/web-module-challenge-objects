@@ -14,7 +14,6 @@ You've been contracted by a restaurant to start building out their website. Befo
 ## Instructions
 
 ### Task 1: Set up Project
-
 1. Fork the repo
 2. Clone your forked version of the repo
 3. cd into your repo and create a branch with your first and last name
