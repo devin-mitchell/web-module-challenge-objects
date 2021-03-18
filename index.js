@@ -1,4 +1,4 @@
-/*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
+/*MAKE SURE TO RrETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 /*When doing these tasks, we recommend using console.log to test the output of your code to make sure it works correctly.*/
 
@@ -179,7 +179,7 @@ Use the getReviewsByRating function below to do the following:
     }
     return result;
   }
-  console.log('push1', getReviewByRating(reviews, 4));
+  console.log('stretch1', getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -194,9 +194,18 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
-    /* code here */
-  }
+function getLongReviews(array) {
+  const longReviews = [];
+    for(var i = 0; i < array.length; i++){
+      let newArr = array[i].feedback.split(" ");
+      if(newArr.length > 15){
+        longReviews.push(array[i]);
+      }
+    }  
+      return longReviews;
+}
+
+  console.log('stretch2', getLongReviews(reviews));
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -217,10 +226,10 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker() {
+
 }
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
