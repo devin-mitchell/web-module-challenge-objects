@@ -38,9 +38,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
-console.log(createMenuItem("Pizza", 5, "lunch"));
-console.log(createMenuItem("Bagel", 4, "breakfast"));
-console.log(createMenuItem("salad", 7, "dinner"));
+console.log('task1b----------->', createMenuItem("Pizza", 5, "lunch"));
+console.log('task1b----------->', createMenuItem("Bagel", 4, "breakfast"));
+console.log('task1b----------->', createMenuItem("salad", 7, "dinner"));
 
 
 
@@ -88,7 +88,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-console.log(reviews[5].feedback);
+console.log('task3------------>', reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -102,7 +102,7 @@ reviews.push({
   rating: 4,
   feedback: "tbh its pretty good, idk",
 })
-console.log(reviews);
+console.log('task4------------>', reviews);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Reyna's feedback is missing! Use what you know to do the following: (no function needed) 
@@ -112,7 +112,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 
 reviews[7].feedback = "this place is chill with really cool people, great for getting work donw on weekdays";
 
-console.log(reviews);
+console.log('task5------------>', reviews);
 
 
 
@@ -150,7 +150,7 @@ function getLastReview(arrayOfObjects) {
   let lastReview = arrayOfObjects[arrayOfObjects.length -1];
   return `${lastReview.name} gave the restaurant a ${lastReview.rating} star review, and their feedback was: ${lastReview.feedback}`;
 } 
-console.log(getLastReview(reviews));
+console.log('task7------->', getLastReview(reviews));
 
 
 
@@ -179,7 +179,7 @@ Use the getReviewsByRating function below to do the following:
     }
     return result;
   }
-  console.log('stretch1', getReviewByRating(reviews, 4));
+  console.log('stretch1---------->', getReviewByRating(reviews, 4));
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
@@ -196,7 +196,7 @@ Use the getLongReviews function below to do the following:
 
 function getLongReviews(array) {
   const longReviews = [];
-    for(var i = 0; i < array.length; i++){
+    for(let i = 0; i < array.length; i++){
       let newArr = array[i].feedback.split(" ");
       if(newArr.length > 15){
         longReviews.push(array[i]);
@@ -205,7 +205,7 @@ function getLongReviews(array) {
       return longReviews;
 }
 
-  console.log('stretch2', getLongReviews(reviews));
+  console.log('stretch2---------->', getLongReviews(reviews));
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
@@ -226,9 +226,16 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker() {
-
+function carMaker(odometer) {
+  const car1 = {
+    drive: function(distance){
+      return odometer + distance;
+    }
+  }
+  return car1;
 }
+
+console.log('stretch3--------------->', carMaker(10).drive(100));
 
 
 
